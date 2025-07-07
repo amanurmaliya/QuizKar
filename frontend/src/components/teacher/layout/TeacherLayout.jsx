@@ -3,6 +3,7 @@ import {Outlet} from "react-router-dom";
 import TeacherSideBar from "../sidebar/TeacherSidebar";
 import {commonSelector } from "../../../store/features/common/commonSlice"
 import {useSelector} from "react-redux"
+import Header from "../header";
 
 const TeacherLayout = () => {
     const {isSideBarOpen} = useSelector(commonSelector);
@@ -16,9 +17,7 @@ const TeacherLayout = () => {
             {/* Here the overflow auto will adjust the content accordingly and will not allow the data to over flow uselessly and will make the nav sticky so acheiving the thing which we thought of sticky navbar */}
             <main className="flex-1 overflow-auto"> 
                 
-            <nav className="h-16 top-0 sticky bg-blue-400">
-                Navbar
-            </nav>
+            <Header/>
 
             <div className="p-2">
 

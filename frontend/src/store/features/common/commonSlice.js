@@ -7,11 +7,12 @@ const commonSlice = createSlice({
     name: "teacher-common",
     initialState : commonInitialState,
     reducers : {
-        toggleSideBar : Actions.toggleSideBarActions
+        toggleSideBar : Actions.toggleSideBarActions,
+        setCommonKey : Actions.setCommonKeyAction
     }
 
 })
 
 
-export const { toggleSideBar } = commonSlice.actions;
+export const { toggleSideBar , setCommonKey} = commonSlice.actions;
 export default commonSlice.reducer
