@@ -1,4 +1,5 @@
 export const InputTypes = {
     TEXT : "text",
-    MULTILINE : "multiline"
+    MULTILINE : "multiline",
+    DROPDOWN : "dropdown"
 }
