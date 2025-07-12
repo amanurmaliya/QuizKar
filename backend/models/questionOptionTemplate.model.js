@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-export const questionOptionTemplateSchema = new mongoose.Schema({
+const questionOptionTemplateSchema = new mongoose.Schema({
     includeHints : {
         type : Boolean,
         default : false,
@@ -23,4 +23,4 @@ export const questionOptionTemplateSchema = new mongoose.Schema({
 })
 
 
-// const Option = mongoose.model("Option", optionTemplateSchema);
+module.exports = {questionOptionTemplateSchema}

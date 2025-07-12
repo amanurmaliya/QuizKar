@@ -1,4 +1,4 @@
-import {questionTemplateSchema} from "."
+const {questionTemplateSchema}  = require("./questionTemplate.model")
 
 const mongoose = require("mongoose")
 
@@ -22,6 +22,17 @@ const templateSchema = new mongoose.Schema({
     question : {
         type : questionTemplateSchema,
         required : true,
+    },
+    // By default we do not directly delete the data from the database Rather we keep the data 
+    // But according to the EU rules & ISO the maximum amount of time the companies can keep the data is 30 days 
+    // So they basically do that whenever we delete the data we set the deleted as Date.now();
+    // Then there are CRON or clean up jobs(preferred first name) which as basically same as polling 
+    // where the CRON runs at certain time like : every 1 min , or everyday at 12 am or every friday at 2 am and so on 
+    // and then it checks the each data from the database where the deleted date exceeds 30 days then it automatically deletes it from the db
+    // Currently we are not implementing this but this one is for future use
+    deletedAt : {
+        type : Date,
+        default : null,
     }
 }, {
     timestamps : true // This will allow us to store the time stamp in order to track
@@ -32,4 +43,6 @@ const templateSchema = new mongoose.Schema({
     * Here we have created indexing in two columns title & subject individually
 */
 
-export const Template = mongoose.model("Template", templateSchema)
+const Template = mongoose.model("Template", templateSchema)
+
+module.exports = {Template}

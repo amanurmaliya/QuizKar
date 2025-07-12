@@ -1,5 +1,3 @@
 // -------------- Templates --------------
-
-export * from "./questionOptionTemplate.model";
-export * from "./questionTemplate.model";
-export * from "./template.model";
+const { Template } = require('./template.model');
+module.exports = { Template };
