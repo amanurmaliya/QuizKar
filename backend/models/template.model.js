@@ -19,10 +19,10 @@ const templateSchema = new mongoose.Schema({
         type : String,
         required : true,
     },
-    question : {
+    question : [{
         type : questionTemplateSchema,
         required : true,
-    },
+    }],
     // By default we do not directly delete the data from the database Rather we keep the data 
     // But according to the EU rules & ISO the maximum amount of time the companies can keep the data is 30 days 
     // So they basically do that whenever we delete the data we set the deleted as Date.now();

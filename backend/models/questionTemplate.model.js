@@ -27,10 +27,11 @@ const questionTemplateSchema = new mongoose.Schema({
     prompt : {
         type : String,
     },
-    option : {
+    options : {
         type : questionOptionTemplateSchema,
         required : true
     }
 })
+const QuestionTemplate = mongoose.model("QuestionTemplateSchema", questionTemplateSchema);
 
-module.exports = {questionTemplateSchema}
+module.exports = {QuestionTemplate, questionTemplateSchema}

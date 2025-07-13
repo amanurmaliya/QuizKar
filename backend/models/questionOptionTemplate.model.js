@@ -22,5 +22,6 @@ const questionOptionTemplateSchema = new mongoose.Schema({
     _id: false // This means that we are not going to store the id here since this is going to be accessible through the template data only
 })
 
+const QuestionOptionTemplate = mongoose.model("QuestionOptionTemplate", questionOptionTemplateSchema);
 
-module.exports = {questionOptionTemplateSchema}
+module.exports = {QuestionOptionTemplate, questionOptionTemplateSchema}

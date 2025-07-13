@@ -1,3 +1,3 @@
-const {getAllTemplates, getTemplateById, deleteTemplateById} = require("./template.controller")
+const {createTemplate, getAllTemplates, getTemplateById, deleteTemplateById} = require("./template.controller")
 
-module.exports = {getAllTemplates, getTemplateById, deleteTemplateById}
+module.exports = {createTemplate, getAllTemplates, getTemplateById, deleteTemplateById}
