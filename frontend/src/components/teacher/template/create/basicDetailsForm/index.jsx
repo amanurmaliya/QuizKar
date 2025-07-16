@@ -22,6 +22,7 @@ const TemplateBasicDetailsForm = () => {
             
             <div className="flex gap-4 w-full">
             <CustomInputs inputTypes={InputTypes.TEXT} value={subject} id={"subject"} labelPosition={LabelPositionTypes.TOP} label={"Subject"} placeholder="E.g., Maths, English , Hindi..." onChange={(value)=> handleChange("subject", value)} />
+                
             <CustomInputs inputTypes={InputTypes.TEXT} value={gradeLevel} id={"grade"} label={"Grade Level"} labelPosition={LabelPositionTypes.TOP} placeholder="E.g., 9, 10th, 12 or Collage 1st year, etc..." onChange={(value)=> handleChange("gradeLevel", value)}/>
             </div>
             </form>

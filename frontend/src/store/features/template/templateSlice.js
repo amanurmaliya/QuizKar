@@ -12,8 +12,12 @@ const templateSlice = createSlice({
     initialState : templateInitialState,
     reducers : {
         setTemplateKey : Actions.setTemplateKeyAction,
+        addNewQuestionType : Actions.addNewQuestionTypeAction,
+        removeQuestionType : Actions.removeQuestionTypeAction,
+        updateQuestionTypeData : Actions.updateQuestionTypeDataAction,
+        updateQuestionTypeOptions : Actions.updateQuestionTypeOptionAction
     }
 })
 
-export const {setTemplateKey} = templateSlice.actions;
+export const {setTemplateKey, addNewQuestionType, removeQuestionType, updateQuestionTypeData, updateQuestionTypeOptions} = templateSlice.actions;
 export default templateSlice.reducer;

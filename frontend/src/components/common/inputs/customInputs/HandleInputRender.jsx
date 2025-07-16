@@ -4,6 +4,7 @@ import { CustomTextInput } from "../customTextInput";
 import { CustomTextArea } from "../customTextArea";
 import {InputTypes} from "./types/index"
 import CustomDropDown from "../../customeDropDown";
+import CustomDropDownInput from "../customDropDownInput";
 
 const HandleInputRender = ({inputTypes, ...props}) => {
     switch(inputTypes)
@@ -13,7 +14,7 @@ const HandleInputRender = ({inputTypes, ...props}) => {
         case InputTypes.MULTILINE:
             return <CustomTextArea {...props}/>
         case InputTypes.DROPDOWN:
-            return <CustomDropDown {...props}/>
+            return <CustomDropDownInput {...props}/>
         default :
             return;
     }
