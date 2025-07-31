@@ -22,6 +22,7 @@ const CreateTemplatePage = () => {
         <QuestionTypes />
       <hr className="my-4" />
         <AddQuestionType />
+        
     </div>
   );
 };

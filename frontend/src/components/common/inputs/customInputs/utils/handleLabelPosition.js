@@ -7,6 +7,8 @@ export const handleLabelPosition = (labelPosition = LabelPositionTypes.TOP) => {
             return "flex-col";
         case LabelPositionTypes.LEFT:
             return "flex-row gap-1 items-center";
+        case LabelPositionTypes.RIGHT:
+            return "flex-row-reverse justify-start gap-1 items-center";
         default : 
             return ;
     }

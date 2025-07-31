@@ -1,4 +1,5 @@
 export const LabelPositionTypes = {
     LEFT : "left",
-    TOP : "top"
+    TOP : "top",
+    RIGHT : "right",
 }

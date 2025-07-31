@@ -5,6 +5,7 @@ import { CustomTextArea } from "../customTextArea";
 import {InputTypes} from "./types/index"
 import CustomDropDown from "../../customeDropDown";
 import CustomDropDownInput from "../customDropDownInput";
+import CustomCheckBox from "../customCheckBox";
 
 const HandleInputRender = ({inputTypes, ...props}) => {
     switch(inputTypes)
@@ -15,6 +16,8 @@ const HandleInputRender = ({inputTypes, ...props}) => {
             return <CustomTextArea {...props}/>
         case InputTypes.DROPDOWN:
             return <CustomDropDownInput {...props}/>
+        case InputTypes.CHECKBOX:
+            return <CustomCheckBox {...props} />
         default :
             return;
     }

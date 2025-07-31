@@ -7,7 +7,7 @@ import CustomDropDownInput from "../../../../../components/common/inputs/customD
 import {questionOptions} from "../../../../../utils"
 import { PlusIcon } from "lucide-react";
 import { CustomInputs } from "../../../../../components/common/inputs/customInputs";
-const AddQuestionType = () => {
+const  AddQuestionType = () => {
   const [selectedValue, setSelectedValue] = useState("")
     const dispatch = useDispatch();
   const handleAddQuestionType = (value) => {
@@ -19,9 +19,9 @@ const AddQuestionType = () => {
         <CustomInputs
         inputTypes={InputTypes.DROPDOWN}
         label={"Add Question Type"}
-      value={selectedValue}
-      onChange={handleAddQuestionType}
-      options={questionOptions}
+        value={selectedValue}
+        onChange={handleAddQuestionType}
+        options={questionOptions}
       />
     )
 }

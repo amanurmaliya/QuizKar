@@ -5,6 +5,7 @@ import { CustomInputs } from "../../../common/inputs/customInputs";
 import { InputTypes } from "../../../common/inputs/customInputs/types";
 import { templateSelector, updateQuestionTypeData } from "../../../../store/features/template/templateSlice";
 import { useSelector } from "react-redux";
+import Options from "./Options";
 
 const QuestionType = ({index}) => {
     const dispatch = useDispatch();
@@ -38,7 +39,11 @@ const QuestionType = ({index}) => {
             <CustomInputs inputTypes={InputTypes.DROPDOWN} options={difficultyOptions} label={"Select Difficulty Level"} placeholder={"Easy, Medium, Hard"} onChange={(value)=> {handleChange("difficultyLevel", value)}} value={questionType.data.difficultyLevel} />
             <CustomInputs inputTypes={InputTypes.MULTILINE} label={"Custom AI Prompt"} placeholder={"E.g,. Make sure Each question is unique & Different from other"} onChange={(value)=> { handleChange("customPrompt", value)}} value={questionType.data.customPrompt}/>
              </div>
+            
+            <Options index={index} />
           </form>
+          
+
         </div>
 )
 }
