@@ -1,3 +1,4 @@
+import { TestTubeDiagonal } from "lucide-react";
 import {LayoutDashboard, BookDashed} from "lucide-react"
 
 export const SideBarTopElements = [
@@ -10,5 +11,10 @@ export const SideBarTopElements = [
         label : "Templates",
         to : "/teacher/templates",
         icon : <BookDashed />
-    }
+    },
+    {
+        label : "Assessments",
+        to : "/teacher/Assessments",
+        icon : <TestTubeDiagonal />
+    },
 ];
