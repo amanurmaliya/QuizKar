@@ -14,7 +14,7 @@ export const SideBarTopElements = [
     },
     {
         label : "Assessments",
-        to : "/teacher/Assessments",
+        to : "/teacher/assessments/",
         icon : <TestTubeDiagonal />
     },
 ];
